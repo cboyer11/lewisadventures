@@ -1,0 +1,270 @@
+:root {
+  --page-width: 100%;
+  --text: #aba7f2;
+  --background: #f9fdf1;
+  --primary: #feda76;
+  --secondary: #E1F5BC;
+  --accent: #f9f1be;
+}
+
+/* All site text should use Playfair Display to match the header. */
+/* Playfair is already imported above for headings; we'll use it for body too. */
+
+/* Import Playfair Display from Google Fonts for headings */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Apply Playfair Display to headings */
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body{
+  /* Use Playfair Display for body text to match header headings */
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  /* reduce vertical padding so page is shorter on small screens */
+      padding: 12px 12px;
+}
+
+.page {
+  width: 100%;
+  max-width: 1400px;
+      padding: 0 12px;
+}
+/* Header */
+header.header-box {
+  width: 100%;              /* fit page width */
+  border: 3px solid var(--accent);
+  background: var(--primary);
+  padding: 6px 8px; /* thinner header */
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between; /* spread logo/h1 and right section */
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  /* Match nav sizing */
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+}
+
+.logo-img {
+  max-width: 80px; /* smaller logo to reduce header height */
+  height: auto;
+  display: block;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 34px; /* slightly bigger heading for desktop */
+  line-height: 1.1;
+}
+
+/* Slightly smaller header on very narrow screens */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+}
+
+/* Navigation */
+nav.nav-box {
+  width: 100%;               /* fit page width */
+  border: 3px solid var(--accent);
+  background: var(--secondary);
+  padding: 8px 10px;
+  margin-bottom: 14px;
+
+  display: flex;
+  justify-content: space-between; /* spread links across nav width */
+  align-items: center;
+}
+
+/* Inner nav container: make the actual links flex children so they distribute evenly */
+nav .nav-inner{
+  display:flex;
+  width:100%;
+  justify-content:space-evenly; /* evenly space items including edges */
+  align-items:center;
+  gap:0;
+}
+
+/* Each anchor becomes a flex child with centered text and equal share of space */
+nav .nav-inner a{
+  flex:1 1 auto;
+  display:block;
+  text-align:center;
+  padding:10px 8px; /* increased vertical padding for easier tapping */
+  text-decoration:none;
+  color:var(--text);
+  font-size:18px; /* larger nav font */
+  font-weight:600;
+}
+
+/* Main content */
+.main {
+  width: 100%;               /* fit page width */
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.photo-card img.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps image aspect ratio and fills card */
+  display: block;
+}
+/* "Meet Colette and Lewis" Section */
+.photo-section {
+  display: flex;
+  gap: 16px;
+  align-items: stretch; /* make the image and text equal height */
+  margin-bottom: 18px;
+}
+
+.photo-section .photo-card {
+  flex: 1 1 50%;
+  min-height: 200px; /* restored to previous saved size */
+}
+
+.photo-text {
+  flex: 1 1 50%;
+  min-height: 200px; /* restored to previous saved size */
+  border: 3px solid var(--accent);
+  background: var(--secondary);
+  padding: 16px; /* restored padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* align content to the top */
+  align-items: center; /* center content horizontally */
+  padding-top: 12px; /* bring heading closer to the top */
+  text-align: center; /* center inline text */
+}
+
+.photo-text h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 28px; /* larger section heading */
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .photo-text h2 {
+    font-size: 20px; /* keep readable on small screens */
+  }
+}
+
+.photo-text p {
+  margin: 12px 0 0 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Intro section */
+.intro {
+  flex: 1;                   /* take remaining space */
+  border: 3px solid var(--accent);
+  background: var(--secondary);
+  min-height: 200px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro h2 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.intro p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* Footer */
+footer.footer-box {
+  width: 100%;              /* fit page width */
+  border: 3px solid var(--accent);
+  background: var(--primary);
+  /* slightly smaller padding so footer sits higher */
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  /* normal flow footer (not fixed) */
+}
+
+.footer-left {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.footer-center {
+  margin: 0 auto;
+  font-size: 14px;
+  color: var(--text);
+  text-align: center;
+}
+
+.socials {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-card {
+    width: 100%;
+  }
+
+  .intro {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  footer.footer-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav.nav-box {
+    flex-wrap: wrap;           /* allow links to wrap on smaller screens */
+    justify-content: center;
+    gap: 20px;                 /* smaller gap on mobile */
+  }
+}
