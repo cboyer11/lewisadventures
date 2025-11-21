@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lewis Adventures</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Green text box wrapper */
+.training-box {
+  background-color: #E1F5BC; /* Green background */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;             /* Flexbox layout */
+  gap: 20px;                 /* Space between text and video */
+  align-items: flex-start;   /* Align text and video at the top */
+  color: #aba7f2;               /* White text for contrast */
+  line-height: 1.6;
+  margin: 20px 0;            /* Space above and below the box */
+}
+
+/* Text content takes remaining space */
+.training-box .text-content {
+  flex: 1;
+}
+
+/* Video stays fixed size */
+.training-box .video-content {
+  flex-shrink: 0;
+}
+
+/* Optional: make video responsive on smaller screens */
+@media (max-width: 768px) {
+  .training-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-content {
+    margin-top: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header class="header-box">
+    <img src="logo.jpg" alt="Lewis Adventures Logo" class="logo-img">
+    <h1>Lewis Adventures</h1>
+    <div class="header-right">
+      <div>Socials</div>
+      <div>Contact</div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-box">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="training.html">Training</a>
+      <a href="treats.html">Treats</a>
+      <a href="tiring.html">Tiring</a>
+      <a href="todos.html">To Do</a>
+    </div>
+  </nav>
+
+  <!-- Main training section -->
+  <div class="training-box">
+
+    <!-- Text Content -->
+    <div class="text-content">
+      <h2>Training Tips and Tricks</h2>
+      <p>Welcome to the Training page! Here, you'll find all the tips and tricks that Colette and I learned during our training journey together. Whether you're teaching your pup basic commands or advanced tricks, we've got you covered!</p>
+
+      <h3>Basic Commands</h3>
+      <ul>
+        <li><strong>Sit:</strong> Hold a treat above your dog's head and move it back towards their tail. As they follow the treat with their eyes, their bottom will naturally lower to the ground. Once they're sitting, say "Sit" and give them the treat.</li>
+        <li><strong>Stay:</strong> Ask your dog to sit, then open your palm in front of them and say "Stay." Take a step back, and if they stay put, reward them with a treat. Gradually increase the distance and duration.</li>
+        <li><strong>Come:</strong> Use a happy tone and say "Come" while gently pulling on their leash. When they reach you, reward them with praise and a treat.</li>
+      </ul>
+
+      <h3>Advanced Tricks</h3>
+      <ul>
+        <li><strong>Give Me Paw:</strong> Ask your dog to sit, then gently lift one of their paws while saying "Give Me Paw." Reward them when they offer their paw.</li>
+        <li><strong>Roll Over:</strong> Start with your dog in a lying down position. Hold a treat near their nose and slowly move it in a circular motion over their head. As they follow the treat, their body will naturally roll over. Say "Roll Over" and reward them.</li>
+        <li><strong>Play Dead:</strong> Ask your dog to lie down, then gently roll them onto their side while saying "Play Dead." Reward them for staying in that position.</li>
+      </ul>
+
+      <p>Remember, patience and consistency are key when training your furry friend. Always use positive reinforcement and make training sessions fun for both you and your dog!</p>
+    </div>
+
+    <!-- Video Content -->
+    <div class="video-content">
+      <video width="380" height="380" controls>
+        <source src="givingpaw.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-box" role="contentinfo">
+    <div class="footer-center">2025 Lewis Adventures</div>
+  </footer>
+
+</div>
+</body>
+</html>
