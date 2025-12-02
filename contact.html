@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact • Lewis Adventures</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Inline supplemental styling consistent with your theme */
+body {
+background: var(--background);
+color: var(--text);
+font-family: "Playfair Display", serif;
+margin: 0;
+padding: 0;
+}
+
+
+.page {
+max-width: var(--page-width);
+margin: 0 auto;
+padding: 20px;
+}
+
+
+.header-box {
+display: flex;
+align-items: center;
+gap: 16px;
+padding: 20px 0;
+}
+
+
+.Logo-img {
+height: 70px;
+width: auto;
+border-radius: 8px;
+}
+
+
+.header-nav a {
+margin-left: auto;
+font-size: 1.1rem;
+color: var(--text);
+text-decoration: none;
+padding: 8px 12px;
+}
+
+
+.header-nav a:hover {
+text-decoration: underline;
+}
+
+
+h2 {
+color: var(--primary);
+font-size: 2rem;
+margin-top: 40px;
+}
+
+
+.contact-container {
+background: var(--secondary);
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+max-width: 650px;
+margin-top: 20px;
+}
+
+
+.contact-container label {
+display: block;
+margin-top: 15px;
+font-size: 1.1rem;
+color: var(--text);
+}
+
+
+.contact-container input,
+.contact-container textarea {
+width: 100%;
+padding: 12px;
+border-radius: 10px;
+border: 1px solid var(--accent);
+margin-top: 6px;
+background: #fff;
+font-family: inherit;
+}
+
+
+.contact-container button {
+margin-top: 20px;
+padding: 12px 20px;
+background: var(--primary);
+color: #000;
+border: none;
+border-radius: 12px;
+font-size: 1.1rem;
+cursor: pointer;
+}
+
+
+.contact-container button:hover {
+opacity: 0.9;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+
+<header class="header-box">
+<img src="Logo.jpg" class="Logo-img" alt="Lewis Adventures Logo">
+<h1>Lewis Adventures</h1>
+<nav class="header-nav">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+
+<h2>Contact Us</h2>
+<a href="mailto:lewisadventures@myyahoo.com">lewisadventures@myyahoo.com</a>
+<p></p>
+For any questions, suggestions, or collaborations, feel free to reach out using the form below:
+<div class="contact-container">
+<form action="#" method="post">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="6" required></textarea>
+
+
+<button type="submit">Send Message</button>
+</form>
+</div>
+
+
+</div>
+</body>
+</html>

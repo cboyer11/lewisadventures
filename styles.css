@@ -118,10 +118,36 @@ nav .nav-inner a{
   text-align:center;
   padding:10px 8px; /* increased vertical padding for easier tapping */
   text-decoration:none;
-  color:var(--text);
+  color:#aba7f2;
   font-size:18px; /* larger nav font */
   font-weight:600;
 }
+/* REMOVE BULLETS ON ANY UL NAV (if used elsewhere) */
+nav ul,
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* -------- HEADER NAV LINKS (Home + Contact in header) -------- */
+
+.header-nav a {
+  font-size: 1.1rem;
+  color: #aba7f2;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* FIX: No underline on hover */
+.header-nav a:hover,
+nav .nav-inner a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
 /* Main content */
 .main {
   width: 100%;               /* fit page width */
@@ -402,4 +428,12 @@ footer.footer-box {
 
 .comment-form button:hover {
   background-color: #E1F5BC;
+}
+a.email-link {
+  text-decoration: none; /* removes underline */
+  color: #aba7f2;        /* your purple color */
+}
+
+a.email-link:hover {
+  opacity: 0.8;          /* subtle hover effect */
 }
