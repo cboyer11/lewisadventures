@@ -463,4 +463,27 @@ footer.footer-box {
 .activity-table tr:hover {
   background-color: #f9f9f9;
 }
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  padding: 12px;
+  /* Remove flex layout */
+  /* display: flex; */
+  /* justify-content: center; */
+}
 
+.page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* centers page */
+  padding: 0 12px;
+footer.footer-box {
+  width: 100%;
+  border: 3px solid var(--accent);
+  background-color: var(--primary);
+  padding: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
