@@ -438,12 +438,21 @@ footer.footer-box {
   width: 100%;
 }
 
-/* Table styles for activity table (moved here from inline) */
+/* Section subtitle centered to match the table */
+.section-subtitle {
+  margin: 24px auto 8px;
+  color: var(--text);
+  font-size: 1.2rem;
+  text-align: center;      /* center the title */
+  max-width: 900px;        /* keep title width in line with table */
+}
+
+/* Table styles for activity table (centered under the green box) */
 .activity-table {
-  width: 90%;
-  max-width: 900px;     /* prevent the table from stretching too wide */
+  width: 80%;              /* table width relative to container */
+  max-width: 900px;        /* prevent it from getting too wide */
   border-collapse: collapse;
-  margin: 20px auto;    /* centers the table inside the green box */
+  margin: 12px auto 24px;  /* centers the table inside the green box */
   font-size: 16px;
   color: var(--text);
 }
@@ -459,7 +468,7 @@ footer.footer-box {
   font-weight: 700;
 }
 
-/* Small-screen responsive table */
+/* Small-screen responsive table (keeps stacked behavior) */
 @media (max-width: 720px) {
   .activity-table, .activity-table thead, .activity-table tbody, .activity-table th, .activity-table td, .activity-table tr {
     display: block;
