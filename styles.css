@@ -438,52 +438,46 @@ footer.footer-box {
   width: 100%;
 }
 
-/* Table styling */
+/* Table styles for activity table (moved here from inline) */
 .activity-table {
-  width: 100%;
+  width: 90%;
+  max-width: 900px;     /* prevent the table from stretching too wide */
   border-collapse: collapse;
+  margin: 20px auto;    /* centers the table inside the green box */
+  font-size: 16px;
+  color: var(--text);
 }
-
 .activity-table th,
 .activity-table td {
-  padding: 12px 15px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 10px;
   text-align: left;
-  font-size: 16px;
-  color: #333; /* darker for readability */
 }
-
 .activity-table th {
-  background-color: var(--secondary); /* soft green to match theme */
+  background: var(--primary);
+  color: #000;
   font-weight: 700;
-  color: #333;
 }
 
-/* Optional: hover effect for rows */
-.activity-table tr:hover {
-  background-color: #f9f9f9;
-}
-body {
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  background: var(--background);
-  color: var(--text);
-  padding: 12px;
-  /* Remove flex layout */
-  /* display: flex; */
-  /* justify-content: center; */
-}
-
-.page {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto; /* centers page */
-  padding: 0 12px;
-footer.footer-box {
-  width: 100%;
-  border: 3px solid var(--accent);
-  background-color: var(--primary);
-  padding: 12px;
-  margin-top: 20px;
-  text-align: center;
+/* Small-screen responsive table */
+@media (max-width: 720px) {
+  .activity-table, .activity-table thead, .activity-table tbody, .activity-table th, .activity-table td, .activity-table tr {
+    display: block;
+  }
+  .activity-table tr { margin-bottom: 12px; }
+  .activity-table td {
+    padding-left: 50%;
+    position: relative;
+  }
+  .activity-table td::before {
+    position: absolute;
+    left: 12px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .activity-table td:nth-of-type(1)::before { content: "Activity"; }
+  .activity-table td:nth-of-type(2)::before { content: "Location"; }
+  .activity-table td:nth-of-type(3)::before { content: "Typical Duration"; }
+  .activity-table td:nth-of-type(4)::before { content: "Notes"; }
 }
