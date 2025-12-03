@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lewis Adventures</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiring • Lewis Adventures</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <div class="page">
@@ -13,10 +13,12 @@
   <header class="header-box">
     <img src="logo.jpg" alt="Lewis Adventures Logo" class="logo-img">
     <h1>Lewis Adventures</h1>
-    <div class="header-right">
-      <li><a href="socials.html">Socials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </div>
+
+    <!-- clean header links (no orphan li tags) -->
+    <nav class="header-nav" aria-label="Header links">
+      <a href="socials.html">Socials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <!-- Navigation -->
@@ -39,60 +41,73 @@
     <!-- GALLERY -->
     <div class="gallery-horizontal">
       <div class="gallery-item">
-        <img src="sniffspot.png" alt="Merrick Treats">
+        <img src="sniffspot.png" alt="Sniffspot">
         <p class="caption">
-          Sniffspot is an amazing platform that allows me to explore new and exciting outdoor locations with my human. It's like having access to a private park where I can run and play off-leash to my heart's content. Each spot is unique and offers different scents and environments to explore. It's a great way for me to get exercise, satisfy my natural sniffing instincts, and swim.
+          Sniffspot is an amazing platform that allows me to explore new and exciting outdoor locations with my human. It's like having access to a private park where I can run and play off-leash.
         </p>
       </div>
 
       <div class="gallery-item">
-        <img src="snuffle mat .png" alt="PureBites Treats">
+        <img src="snuffle mat .png" alt="Snuffle mat">
         <p class="caption">
-          Snuffle Mats are fantastic enrichment toys that provide both mental and physical stimulation. They mimic natural foraging behavior, encouraging me to use my nose and brain to find hidden treats or kibble within the fabric strips. This activity not only keeps me entertained but also helps to slow down my eating pace, which is beneficial for digestion.
+         Snuffle Mats are fantastic enrichment toys that provide both mental and physical stimulation. They encourage natural foraging behavior and keep pups entertained.
         </p>
       </div>
 
-       <div class="gallery-item">
-        <img src="orange treat toy.png" alt="Orange Treat Toy">
+      <div class="gallery-item">
+        <img src="orange treat toy.png" alt="Orange treat toy">
         <p class="caption">
-          Orange treat toys keep me active and mentally stimulated. They dispense treats while encouraging problem-solving, making playtime tiring and fun.
+          Orange treat toys are great for keeping me engaged and active. They dispense treats while encouraging problem solving.
         </p>
       </div>
-    </div>
+    </div> <!-- /.gallery-horizontal -->
 
-    <!-- Table Section -->
-    <h2 class="gallery-title">Activity Comparison Table</h2>
-    <div class="table-wrapper">
-      <table class="activity-table">
+    <!-- Activity table: added as requested -->
+    <h3 class="section-subtitle">Tiring Activities — Quick Reference</h3>
+    <table class="activity-table" aria-label="Tiring activities table">
+      <thead>
         <tr>
           <th>Activity</th>
-          <th>Type of Stimulation</th>
-          <th>How Tiring It Is</th>
+          <th>Location</th>
+          <th>Typical Duration</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sniffwalking</td>
+          <td>Local parks / trails</td>
+          <td>20–45 minutes</td>
+          <td>Let Lewis lead — slows pace and mentally tires pups.</td>
         </tr>
         <tr>
-          <td>Sniffspot Adventures</td>
-          <td>Physical + Scent</td>
-          <td>High</td>
+          <td>Off-leash play</td>
+          <td>Sniffspot private yards</td>
+          <td>30–60 minutes</td>
+          <td>Great for high-energy dogs; supervise around other dogs.</td>
         </tr>
         <tr>
-          <td>Snuffle Mat</td>
-          <td>Mental + Scent</td>
-          <td>Medium</td>
+          <td>Enrichment feeding (snuffle mat)</td>
+          <td>Home</td>
+          <td>10–20 minutes</td>
+          <td>Good for mental stimulation and slowing eating.</td>
         </tr>
         <tr>
-          <td>Treat Toy</td>
-          <td>Mental + Light Physical</td>
-          <td>Medium–High</td>
+          <td>Tug + treat puzzle</td>
+          <td>Home / yard</td>
+          <td>15–30 minutes</td>
+          <td>Combine physical and mental work for extra tiredness.</td>
         </tr>
-      </table>
-    </div>
+      </tbody>
+    </table>
 
-  </div> <!-- End main-green-box -->
-<!-- Footer -->
-<footer class="footer-box">
-  <div class="footer-center">2025 Lewis Adventures</div>
-</footer>
+  </div> <!-- /.main-green-box -->
 
+  <!-- Footer -->
+  <footer class="footer-box" role="contentinfo">
+    <div class="footer-center">2025 Lewis Adventures</div>
+  </footer>
+
+</div> <!-- /.page -->
 </body>
 </html>
-
