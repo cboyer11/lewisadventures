@@ -429,11 +429,4 @@ footer.footer-box {
 .comment-form button:hover {
   background-color: #E1F5BC;
 }
-a.email-link {
-  text-decoration: none; /* removes underline */
-  color: #aba7f2;        /* your purple color */
-}
 
-a.email-link:hover {
-  opacity: 0.8;          /* subtle hover effect */
-}
